@@ -15,23 +15,50 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
     rel="stylesheet">
+  <!-- Google fonts [ Montserrat ] -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header></header>
+  <div class="container">
+    <header>
+      <div class="logo-holder">
+        <img src="assets/logo icon.svg" alt="logo icon">
+        <span>Enver</span>
+      </div>
 
-  <section class="hero-section"></section>
+      <nav>
+        <ul>
+          <li><a class="active" href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#templates">Our Project</a></li>
+          <li><a href="#why-us">About us</a></li>
+        </ul>
+      </nav>
 
-  <section class="why-us-section"></section>
+      <button class="contact-button" type="button">Contact us</button>
 
-  <section class="services-section"></section>
+      <div class="mobile-nav">
+        <button class="mobile-nav-button" type="button">
+          <img src="assets/mobile-nav-icon.svg" alt="mobile nav icon">
+        </button>
+      </div>
+    </header>
 
-  <section class="templates-section"></section>
+    <section class="hero-section" id="hero"></section>
 
-  <section class="contact-section"></section>
+    <section class="why-us-section" id="why-us"></section>
 
-  <footer></footer>
+    <section class="services-section" id="services"></section>
 
+    <section class="templates-section" id="templates"></section>
+
+    <section class="contact-section"></section>
+
+    <footer></footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 
