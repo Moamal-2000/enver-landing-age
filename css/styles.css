@@ -68,6 +68,10 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
 .logo-holder img {
@@ -80,6 +84,10 @@ header {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 140%;
+  transition: color 0.2s;
+}
+.logo-holder span:hover {
+  color: var(--very-light-gray);
 }
 
 @media (max-width: 768px) {
@@ -102,12 +110,11 @@ header nav ul li a {
   text-align: right;
   font-family: "Nunito Sans";
   font-size: 0.8rem;
-  font-weight: 400;
-}
-header nav ul li a.active {
-  color: var(--light-purple);
   font-weight: 600;
-  letter-spacing: -0.3px;
+  transition: color 0.2s;
+}
+header nav ul li a.active, header nav ul li a:hover {
+  color: var(--light-purple);
 }
 
 .contact-button {
@@ -122,6 +129,15 @@ header nav ul li a.active {
   -webkit-backdrop-filter: blur(0.66px);
           backdrop-filter: blur(0.66px);
   letter-spacing: -0.3px;
+  position: relative;
+  transition: color 0.3s 0.2s, background-color 0.3s;
+}
+.contact-button:hover {
+  color: var(--very-light-yellow);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.contact-button:active {
+  transform: scale(0.996);
 }
 
 @media (max-width: 768px) {
@@ -129,10 +145,23 @@ header nav ul li a.active {
     display: none;
   }
 }
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+}
 .mobile-nav .mobile-nav-button {
   background-color: transparent;
   border: none;
   outline: none;
+  transition: opacity 0.2s;
+}
+.mobile-nav .mobile-nav-button:hover {
+  opacity: 0.7;
 }
 .mobile-nav .mobile-nav-button img {
   width: 24px;
