@@ -72,6 +72,8 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .logo-holder img {
@@ -84,6 +86,11 @@ header {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 140%;
+  transition: color .2s;
+
+  &:hover {
+    color: var(--very-light-gray);
+  }
 }
 
 @include small {
@@ -107,12 +114,12 @@ header nav ul li a {
   text-align: right;
   font-family: "Nunito Sans";
   font-size: .8rem;
-  font-weight: 400;
+  font-weight: 600;
+  transition: color .2s;
 
-  &.active {
+  &.active,
+  &:hover {
     color: var(--light-purple);
-    font-weight: 600;
-    letter-spacing: -.3px;
   }
 }
 
@@ -127,6 +134,17 @@ header nav ul li a {
   border: .66px solid #FFF;
   backdrop-filter: blur(.66px);
   letter-spacing: -.3px;
+  position: relative;
+  transition: color .3s .2s, background-color .3s;
+
+  &:hover {
+    color: var(--very-light-yellow);
+  background-color: rgba(255, 255, 255, .1);
+  }
+
+  &:active {
+    transform: scale(.996);
+  }
 }
 
 @include small {
@@ -135,10 +153,25 @@ header nav ul li a {
   }
 }
 
+.mobile-nav {
+  display: none;
+}
+
+@include small {
+  .mobile-nav {
+    display: block;
+  }
+}
+
 .mobile-nav .mobile-nav-button {
   background-color: transparent;
   border: none;
   outline: none;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .7;
+  }
 
   img {
     width: 24px;
