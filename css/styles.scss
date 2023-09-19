@@ -13,6 +13,7 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   // font-family: 'Graphik Trial', sans-serif;
   // font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -33,6 +34,12 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+@include large {
+  .container {
+    width: 90%;
+  }
 }
 
 @include small {
@@ -61,6 +68,7 @@ img {
   object-fit: cover;
 }
 
+/*        header       */
 header {
   padding: 28px 0;
   display: flex;
@@ -176,6 +184,199 @@ header nav ul li a {
   img {
     width: 24px;
   }
+}
+
+/*        hero       */
+.hero-section {
+  margin: 70px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@include medium {
+  .hero-section {
+    flex-direction: column;
+    gap: 92px;
+    margin: 60px 0;
+  }
+}
+
+.hero-section .left-light {
+  position: absolute;
+  left: 0;
+  top: -300px;
+  width: 310px;
+  height: 1150px;
+  background-image: linear-gradient(180deg, rgba(84, 84, 212, .27) 0%, rgba(84, 84, 212, .11) 100%);
+  transform: rotate(-54deg);
+  border-radius: 155px;
+  filter: blur(99.5px);
+  z-index: -1;
+}
+
+.hero-section .right-light {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 310px;
+  height: 1150px;
+  background-image: linear-gradient(180deg, rgba(251, 168, 28, .11) 0%, rgba(224, 86, 136, .06) 100%);
+  transform: rotate(65.5deg);
+  border-radius: 155px;
+  filter: blur(99.5px);
+  z-index: -1;
+}
+
+.introduction-container h1 {
+  color: var(--white);
+  font-family: 'Graphik Trial';
+  font-size: 3.32rem;
+  font-weight: 700;
+  line-height: 55px;
+  width: 386px;
+}
+
+@include small {
+  .introduction-container h1 {
+    font-size: 2.625rem;
+  }
+}
+
+.introduction-container p {
+  color: var(--white-opacity70);
+  font-family: "Nunito Sans";
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.45px;
+  width: 356px;
+  margin: 15px 0 32px;
+}
+
+@include small {
+  .introduction-container p {
+    font-size: 1rem;
+    margin: 30px 0 50px;
+  }
+}
+
+.introduction-container button {
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-purple);
+  color: var(--white);
+  border-radius: 3px;
+  font-family: "Nunito Sans";
+  font-size: .83rem;
+  font-weight: 700;
+  padding: 11px 17px;
+}
+
+.introduction-container button span {
+  display: block;
+}
+
+.introduction-container button img {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.guy-image-container {
+  width: 370px;
+  height: 470px;
+  position: relative;
+}
+
+.guy-image-container .shape {
+  position: absolute;
+  object-fit: contain;
+}
+
+.guy-image-container .vector {
+  width: 63px;
+  height: 18px;
+  left: -90px;
+  top: 40px;
+}
+
+.guy-image-container .circles {
+  width: 34px;
+  height: 40px;
+  right: 0;
+  top: 0;
+}
+
+.guy-image-container .triangle {
+  width: 69px;
+  height: 80px;
+  left: -110px;
+  bottom: 30px;
+}
+
+.guy-image-container .plus-sign {
+  width: 33px;
+  height: 33px;
+  right: 0;
+  bottom: 50px;
+}
+
+.guy-image-container .background-square-frame {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  border: solid 2px var(--white);
+  transform: rotate(23.5deg);
+  margin-top: 100px;
+  top: 24px;
+  left: 52px;
+}
+
+.guy-image-container::before {
+  content: "";
+  position: absolute;
+  transform: rotate(23.5deg);
+  width: 245px;
+  height: 245.5px;
+  border-radius: 15px;
+  border: solid 3px transparent;
+  border-color: transparent var(--white) var(--white) transparent;
+  margin-top: 100px;
+  top: 63.3px;
+  left: 69px;
+  z-index: 1;
+}
+
+.invisible-holder {
+  transform: rotate(23.5deg);
+  overflow: hidden;
+  width: 350px;
+  height: 397px;
+}
+
+.invisible-holder .square-frame {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, #5454D4, #5e5ee7);
+  border: solid 3px var(--white);
+  margin-top: 100px;
+  position: relative;
+  top: 48px;
+  left: 103px;
+}
+
+.invisible-holder .square-frame img {
+  transform: rotate(-23.5deg);
+  width: 350px;
+  height: 433px;
+  object-fit: contain;
+  position: relative;
+  top: -148px;
+  left: -75px;
 }
 
 /*        portfolio        */
