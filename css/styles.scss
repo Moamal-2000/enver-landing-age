@@ -166,11 +166,7 @@ header nav ul li a {
   display: none;
 }
 
-@include small {
-  .mobile-nav {
-    display: block;
-  }
-}
+
 
 .mobile-nav .mobile-nav-button {
   background-color: transparent;
@@ -698,6 +694,7 @@ header nav ul li a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .templates-section .heading p {
@@ -714,7 +711,14 @@ header nav ul li a {
   width: 41px;
   transform: rotate(-27.371deg) translateY(30px);
 }
-
+.templates-section .slider {
+  overflow: auto;
+  width: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+  }
+}
 .templates-section .templates {
   width: 100%;
   display: flex;
@@ -754,7 +758,40 @@ header nav ul li a {
   background-color: var(--light-purple);
   border-radius: 5px;
 }
-
+.templates-section .switchers {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%,50%);
+  left: 50%;
+  width: 70px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.templates-section .switchers > * {
+  width: 30px;
+  height: 30px;
+  background-color: var(--black-cyan);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+  padding: 5px;
+  &.left img {
+    rotate: -135deg;
+  }
+  &.right img {
+    rotate: 45deg;
+  }
+  &:hover {
+    background-color: var(--light-purple);
+  }
+  &.active {
+    background-color: var(--light-purple);
+  }
+} 
 /*        contact       */
 .contact-section {
   width: 100%;
@@ -819,6 +856,9 @@ footer {
   }
 }
 
+footer .logo-holder {
+  margin-right: 166px;
+}
 footer .other {
   display: inline-flex;
   flex: 1;
@@ -845,4 +885,67 @@ footer .copy-rights {
   font-weight: 400;
   line-height: 25.22px;
   letter-spacing: -0.332px;
+}
+@include small {
+  .mobile-nav {
+    display: block;
+  }
+  .templates-section .heading p {
+    width: 327px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%
+  }
+
+  .templates-section .templates {
+    width: 300%;
+    justify-content: space-around;
+    & > img {
+      margin-top: 0 !important;
+    }
+  }
+  .templates-section i.dot {
+    display: none;
+  }
+  .templates-section .switchers{
+    display: flex;
+  }
+  .contact-section .text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-section .text p {
+    width: 327px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 50px;
+  }
+  .contact-section .double-circle-icon {
+    margin-left: 0;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .logo-holder {
+    margin: 0 0 40px 0;
+  }
+  footer .other {
+    flex-direction: column;
+    margin: 0;
+  }
+  footer .other p {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px; 
+    letter-spacing: 0.503px;
+    margin-bottom: 40px;
+  }
+  footer .copy-rights {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
