@@ -166,7 +166,11 @@ header nav ul li a {
   display: none;
 }
 
-
+@include small {
+  .mobile-nav {
+    display: block;
+  }
+}
 
 .mobile-nav .mobile-nav-button {
   background-color: transparent;
@@ -707,6 +711,15 @@ header nav ul li a {
   text-transform: capitalize;
 }
 
+@include small {
+  .templates-section .heading p {
+    width: 327px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%
+  }
+}
+
 .templates-section .heading img {
   width: 41px;
   transform: rotate(-27.371deg) translateY(30px);
@@ -724,6 +737,16 @@ header nav ul li a {
   display: flex;
   padding-bottom: 40px;
   justify-content: space-between;
+}
+
+@include small {
+  .templates-section .templates {
+    width: 300%;
+    justify-content: space-around;
+    & > img {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 .templates-section .templates img {
@@ -758,6 +781,13 @@ header nav ul li a {
   background-color: var(--light-purple);
   border-radius: 5px;
 }
+
+@include small {
+  .templates-section i.dot {
+    display: none;
+  }
+}
+
 .templates-section .switchers {
   display: none;
   position: absolute;
@@ -769,6 +799,7 @@ header nav ul li a {
   align-items: center;
   justify-content: space-between;
 }
+
 .templates-section .switchers > * {
   width: 30px;
   height: 30px;
@@ -779,9 +810,11 @@ header nav ul li a {
   align-items: center;
   transition: .4s;
   padding: 5px;
+
   &.left img {
     rotate: -135deg;
   }
+
   &.right img {
     rotate: 45deg;
   }
@@ -791,7 +824,8 @@ header nav ul li a {
   &.active {
     background-color: var(--light-purple);
   }
-} 
+}
+
 /*        contact       */
 .contact-section {
   width: 100%;
@@ -886,33 +920,7 @@ footer .copy-rights {
   line-height: 25.22px;
   letter-spacing: -0.332px;
 }
-@include small {
-  .mobile-nav {
-    display: block;
-  }
-}
-@include small {
-  .templates-section .heading p {
-    width: 327px;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 150%
-  }
-}
-@include small {
-  .templates-section .templates {
-    width: 300%;
-    justify-content: space-around;
-    & > img {
-      margin-top: 0 !important;
-    }
-  }
-}
-@include small {
-  .templates-section i.dot {
-    display: none;
-  }
-}
+
 @include small {
   .templates-section .switchers{
     display: flex;
