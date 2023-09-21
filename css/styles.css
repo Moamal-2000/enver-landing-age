@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: #1A191B;
   color: var(--white);
@@ -69,41 +65,7 @@ img {
 
 /*        header       */
 header {
-  padding: 15px 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: solid 3px transparent;
-  transition: border 0.5s, top 0.8s;
-}
-header.active {
-  border-bottom: solid 3px rgba(255, 255, 255, 0.4431372549);
-}
-header.hide {
-  top: -101%;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  box-shadow: inset 0 0 200px rgba(255, 255, 255, 0.05);
-  filter: blur(3px);
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-header.active::before {
-  opacity: 1;
-}
-
-header .container {
+  padding: 28px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -151,15 +113,15 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: var(--white);
+  color: var(--white-opacity70);
   text-align: right;
   font-family: "Nunito Sans";
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   transition: color 0.2s;
 }
 header nav ul li a.active, header nav ul li a:hover {
-  color: #6161ff;
+  color: var(--light-purple);
 }
 
 .contact-button {
@@ -194,11 +156,6 @@ header nav ul li a.active, header nav ul li a:hover {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .mobile-nav {
-    display: block;
-  }
-}
 .mobile-nav .mobile-nav-button {
   background-color: transparent;
   border: none;
@@ -214,7 +171,7 @@ header nav ul li a.active, header nav ul li a:hover {
 
 /*        hero       */
 .hero-section {
-  margin: 147px 0 100px;
+  margin: 70px 0 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -761,6 +718,7 @@ header nav ul li a.active, header nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .templates-section .heading p {
@@ -776,6 +734,15 @@ header nav ul li a.active, header nav ul li a:hover {
 .templates-section .heading img {
   width: 41px;
   transform: rotate(-27.371deg) translateY(30px);
+}
+
+.templates-section .slider {
+  overflow: auto;
+  width: 100%;
+}
+.templates-section .slider::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
 }
 
 .templates-section .templates {
@@ -814,6 +781,42 @@ header nav ul li a.active, header nav ul li a:hover {
   height: 5px;
   background-color: var(--light-purple);
   border-radius: 5px;
+}
+
+.templates-section .switchers {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  width: 70px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.templates-section .switchers > * {
+  width: 30px;
+  height: 30px;
+  background-color: var(--black-cyan);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  padding: 5px;
+}
+.templates-section .switchers > *.left img {
+  rotate: -135deg;
+}
+.templates-section .switchers > *.right img {
+  rotate: 45deg;
+}
+.templates-section .switchers > *:hover {
+  background-color: var(--light-purple);
+}
+.templates-section .switchers > *.active {
+  background-color: var(--light-purple);
 }
 
 /*        contact       */
@@ -879,6 +882,10 @@ footer > * {
   margin-bottom: 40px;
 }
 
+footer .logo-holder {
+  margin-right: 166px;
+}
+
 footer .other {
   display: inline-flex;
   flex: 1;
@@ -905,4 +912,91 @@ footer .copy-rights {
   font-weight: 400;
   line-height: 25.22px;
   letter-spacing: -0.332px;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .templates-section .heading p {
+    width: 327px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}
+@media (max-width: 768px) {
+  .templates-section .templates {
+    width: 300%;
+    justify-content: space-around;
+  }
+  .templates-section .templates > img {
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .templates-section i.dot {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .templates-section .switchers {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section .text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section .text p {
+    width: 327px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section .double-circle-icon {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  footer .logo-holder {
+    margin: 0 0 40px 0;
+  }
+}
+@media (max-width: 768px) {
+  footer .other {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  footer .other p {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.503px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  footer .copy-rights {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=styles.css.map */
