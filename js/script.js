@@ -46,3 +46,4 @@ function handleHeaderOnScroll(e) {
 
 // Events
 window.addEventListener('scroll', (e) => handleHeaderOnScroll(e))
+
