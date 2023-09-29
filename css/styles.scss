@@ -73,43 +73,7 @@ img {
 
 /*        header       */
 header {
-  padding: 15px 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: solid 3px transparent;
-  transition: border .5s, top .6s;
-
-  &.active {
-    border-bottom: solid 3px #ffffff71;
-  }
-
-  &.hide {
-    top: -101%;
-  }
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  box-shadow: inset 0 0 200px rgba(255, 255, 255, .05);
-  filter: blur(3px);
-  opacity: 0;
-  transition: opacity .5s;
-}
-
-header.active::before {
-  opacity: 1;
-}
-
-header .container {
+  padding: 28px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,7 +124,7 @@ header nav ul li a {
   color: var(--white);
   text-align: right;
   font-family: "Nunito Sans";
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: 600;
   transition: color .2s;
 
@@ -736,7 +700,6 @@ header nav ul li a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
-  overflow: hidden;
 }
 
 .templates-section .heading p {
@@ -752,7 +715,7 @@ header nav ul li a {
 @include small {
   .templates-section .heading p {
     width: 327px;
-    font-size: 2.25rem;
+    font-size: 36px;
     font-weight: 700;
     line-height: 150%
   }
@@ -762,17 +725,14 @@ header nav ul li a {
   width: 41px;
   transform: rotate(-27.371deg) translateY(30px);
 }
-
 .templates-section .slider {
   overflow: auto;
   width: 100%;
-
   &::-webkit-scrollbar {
     display: none;
     scroll-behavior: smooth;
   }
 }
-
 .templates-section .templates {
   width: 100%;
   display: flex;
@@ -784,8 +744,7 @@ header nav ul li a {
   .templates-section .templates {
     width: 300%;
     justify-content: space-around;
-
-    &>img {
+    & > img {
       margin-top: 0 !important;
     }
   }
@@ -834,7 +793,7 @@ header nav ul li a {
   display: none;
   position: absolute;
   bottom: 0;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%,50%);
   left: 50%;
   width: 70px;
   height: 30px;
@@ -842,13 +801,7 @@ header nav ul li a {
   justify-content: space-between;
 }
 
-@include small {
-  .templates-section .switchers {
-    display: flex;
-  }
-}
-
-.templates-section .switchers>* {
+.templates-section .switchers > * {
   width: 30px;
   height: 30px;
   background-color: var(--black-cyan);
@@ -866,11 +819,9 @@ header nav ul li a {
   &.right img {
     rotate: 45deg;
   }
-
   &:hover {
     background-color: var(--light-purple);
   }
-
   &.active {
     background-color: var(--light-purple);
   }
@@ -963,23 +914,9 @@ footer {
   }
 }
 
-@include small {
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 footer .logo-holder {
   margin-right: 166px;
 }
-
-@include small {
-  footer .logo-holder {
-    margin: 0 0 40px 0;
-  }
-}
-
 footer .other {
   display: inline-flex;
   flex: 1;
@@ -987,45 +924,83 @@ footer .other {
   align-items: center;
 }
 
-@include small {
-  footer .other {
-    flex-direction: column;
-    margin: 0;
-  }
-}
-
 footer .other p {
-  color: var(--white-opacity70);
+  color: rgba(255, 255, 255, 0.70);
   text-align: center;
-  font-family: "Nunito Sans";
-  font-size: .75rem;
+  font-family: Nunito Sans;
+  font-size: 11.946px;
   font-weight: 400;
-}
-
-@include small {
-  footer .other p {
-    color: var(--white);
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: .5px;
-    margin-bottom: 40px;
-  }
 }
 
 footer .copy-rights {
   margin-left: 64px;
   display: inline-block;
-  width: 189px;
-  color: var(--white-opacity70);
+  width: 189.152px;
+  color: rgba(255, 255, 255, 0.70);
   text-align: right;
-  font-family: "Nunito Sans";
-  font-size: .625rem;
+  font-family: Nunito Sans;
+  font-size: 10.619px;
   font-weight: 400;
-  line-height: 25px;
-  letter-spacing: -.33px;
+  line-height: 25.22px;
+  letter-spacing: -0.332px;
 }
 
+@include small {
+  .templates-section .switchers{
+    display: flex;
+  }
+}
+@include small {
+  .contact-section .text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@include small {
+  
+  .contact-section .text p {
+    width: 327px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 50px;
+  }
+}
+@include small {
+  
+  .contact-section .double-circle-icon {
+    margin-left: 0;
+  }
+}
+@include small {
+  
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@include small {
+  footer .logo-holder {
+    margin: 0 0 40px 0;
+  }
+}
+@include small {
+  
+  footer .other {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+@include small {
+  footer .other p {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px; 
+    letter-spacing: 0.503px;
+    margin-bottom: 40px;
+  }
+}
 @include small {
   footer .copy-rights {
     margin: 0;
@@ -1033,3 +1008,11 @@ footer .copy-rights {
     margin-bottom: 50px;
   }
 }
+
+
+
+
+
+
+
+
