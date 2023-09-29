@@ -2,6 +2,14 @@
 
 // Selectors
 const header = document.querySelector('header')
+const slider = document.querySelector(".slider")
+const templatesHolder = document.querySelector(".templates")
+const slideButtons = document.querySelectorAll(".switchers > i")
+
+
+
+
+
 
 
 // Variables
@@ -11,8 +19,6 @@ let lastScrollYValue = 0
 
 
 
-
-// Initialize code
 
 
 // Functions
@@ -38,33 +44,29 @@ function handleHeaderOnScroll(e) {
 }
 
 
+function handleSlidesButtons(btn) {
+  let ratio = Math.ceil(templatesHolder.offsetWidth / templatesHolder.children.length)
+  if (btn.classList.contains("left")) {
+    slider.scrollBy({
+      top:0,
+      left:-ratio,
+      behavior:"smooth",
+    });
+  }
+  else {
+    slider.scrollBy({
+      top:0,
+      left:ratio,
+      behavior:"smooth",
+    })
+  }
+}
+
+
 
 
 // Events
 window.addEventListener('scroll', (e) => handleHeaderOnScroll(e))
 
 
-// slider 
-
-const slider = document.querySelector(".slider")
-const templatesHolder = document.querySelector(".templates")
-const slideButtons = document.querySelectorAll(".switchers > *")
-slideButtons.forEach(btn => {
-  btn.onclick = function () {
-    let ratio = Math.ceil(templatesHolder.offsetWidth / templatesHolder.children.length)
-    if (btn.classList.contains("left")) {
-      slider.scrollBy({
-        top:0,
-        left:-ratio,
-        behavior:"smooth",
-      });
-    }
-    else {
-      slider.scrollBy({
-        top:0,
-        left:ratio,
-        behavior:"smooth",
-      })
-    }
-  }
-})
+slideButtons.forEach(btn => btn.addEventListener("click", () => handleSlidesButtons(btn)))
