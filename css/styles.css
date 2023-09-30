@@ -962,41 +962,17 @@ header nav ul li a.active, header nav ul li a:hover {
 
 /*        footer       */
 footer {
-  width: 100%;
   display: flex;
   align-items: center;
-}
-footer > * {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  padding: 66px 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   footer {
     flex-direction: column;
-    align-items: center;
-  }
-}
-footer .logo-holder {
-  margin-right: 166px;
-}
-
-@media (max-width: 768px) {
-  footer .logo-holder {
-    margin: 0 0 40px 0;
-  }
-}
-footer .other {
-  display: inline-flex;
-  flex: 1;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  footer .other {
-    flex-direction: column;
-    margin: 0;
+    gap: 30px;
+    padding: 40px 0;
   }
 }
 footer .other p {
@@ -1008,7 +984,7 @@ footer .other p {
 }
 
 @media (max-width: 768px) {
-  footer .other p {
+  footer .other a {
     color: var(--white);
     font-size: 1.125rem;
     font-weight: 700;
@@ -1017,44 +993,29 @@ footer .other p {
     margin-bottom: 40px;
   }
 }
-footer .copy-rights {
-  margin-left: 64px;
-  display: inline-block;
-  width: 189px;
+footer .other ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+footer .other li {
+  list-style: none;
+}
+
+footer .other a {
   color: var(--white-opacity70);
-  text-align: right;
-  font-family: "Nunito Sans";
-  font-size: 0.625rem;
-  font-weight: 400;
-  line-height: 25px;
-  letter-spacing: -0.33px;
-}
-
-footer .other p {
-  color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  font-family: Nunito Sans;
-  font-size: 11.946px;
+  font-family: "Nunito Sans";
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
 footer .copy-rights {
-  margin-left: 64px;
-  display: inline-block;
-  width: 189.152px;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: right;
-  font-family: Nunito Sans;
-  font-size: 10.619px;
+  color: var(--white-opacity70);
+  font-family: "Nunito Sans";
+  font-size: 0.6875rem;
   font-weight: 400;
-  line-height: 25.22px;
-  letter-spacing: -0.332px;
-}
-
-@media (max-width: 768px) {
-  footer .copy-rights {
-    margin: 0;
-    text-align: center;
-    margin-bottom: 50px;
-  }
+  letter-spacing: -0.33px;
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */
