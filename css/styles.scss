@@ -587,6 +587,7 @@ header nav ul li a {
   width: 310px;
   height: 338px;
   transform: rotate(-54.374deg);
+  z-index: -1;
 }
 
 @include small {
@@ -605,6 +606,7 @@ header nav ul li a {
   width: 570px;
   height: 1710px;
   transform: rotate(65.7deg);
+  z-index: -1;
 }
 
 .services-section .title {
@@ -642,10 +644,17 @@ header nav ul li a {
   bottom: 30px;
 }
 
-@include small {
+@include medium {
   .services-section .title .triangle {
     left: 20px;
-    bottom: -30px;
+    bottom: -40px;
+  }
+}
+
+@include small {
+  .services-section .title .triangle {
+    left: -40px;
+    bottom: 0;
   }
 }
 
@@ -655,6 +664,13 @@ header nav ul li a {
   right: 0;
   bottom: 0;
   transform: rotate(-31deg);
+}
+
+@include small {
+  .services-section .title .plus-sign {
+    right: -10px;
+    bottom: 0;
+  }
 }
 
 .services-section .services {
@@ -724,7 +740,7 @@ header nav ul li a {
   letter-spacing: -.3px;
 }
 
-/*        portfolio        */
+/*        templates        */
 .templates-section {
   width: 100%;
   position: relative;
@@ -873,6 +889,18 @@ header nav ul li a {
   &.active {
     background-color: var(--light-purple);
   }
+}
+
+.templates-section .right-light {
+  position: absolute;
+  right: -300px;
+  top: 0;
+  border-radius: 155px;
+  background: linear-gradient(180deg, rgba(84, 84, 212, .20) 0%, rgba(84, 84, 212, .08) 100%);
+  filter: blur(99.5px);
+  width: 398px;
+  height: 433px;
+  z-index: -1;
 }
 
 /*        contact       */
