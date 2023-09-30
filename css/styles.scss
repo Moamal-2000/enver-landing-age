@@ -51,6 +51,25 @@ body {
   }
 }
 
+.cursor-effect {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  z-index: 1000;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width .3s ease, height .3s ease, opacity .4s ease;
+  
+  &.active {
+    opacity: .2;
+    width: 70px;
+    height: 70px;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -125,6 +144,8 @@ header .container {
 
 .logo-holder img {
   width: 26px;
+  position: relative;
+  z-index: -1;
 }
 
 .logo-holder span {
@@ -133,6 +154,8 @@ header .container {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 140%;
+  position: relative;
+  z-index: -1;
   transition: color .2s;
 
   &:hover {
@@ -313,16 +336,23 @@ header nav ul li a {
   font-size: .83rem;
   font-weight: 700;
   padding: 11px 17px;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .introduction-container button span {
   display: block;
+  pointer-events: none;
 }
 
 .introduction-container button img {
   width: 16px;
   height: 16px;
   margin-left: 5px;
+  pointer-events: none;
 }
 
 .guy-image-container {
@@ -863,7 +893,7 @@ header nav ul li a {
   }
 }
 
-.templates-section .switchers>* {
+.templates-section .switchers i {
   width: 30px;
   height: 30px;
   background-color: var(--black-cyan);
@@ -882,13 +912,14 @@ header nav ul li a {
     rotate: 45deg;
   }
 
-  &:hover {
-    background-color: var(--light-purple);
-  }
-
+  &:hover,
   &.active {
     background-color: var(--light-purple);
   }
+}
+
+.templates-section .switchers i>img {
+  pointer-events: none;
 }
 
 .templates-section .right-light {
@@ -976,6 +1007,11 @@ header nav ul li a {
   border-radius: 3px;
   outline: none;
   border: none;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 /*        footer       */
@@ -994,41 +1030,31 @@ footer {
   }
 }
 
-footer .other p {
-  color: var(--white-opacity70);
-  text-align: center;
-  font-family: "Nunito Sans";
-  font-size: .75rem;
-  font-weight: 400;
-}
-
-@include small {
-  footer .other a {
-    color: var(--white);
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: .5px;
-    margin-bottom: 40px;
-  }
-}
-
 footer .other ul {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 22px;
 }
 
 footer .other li {
   list-style: none;
+  padding: 4px;
+  cursor: pointer;
+
+  &:hover a {
+    color: var(--white);
+  }
 }
 
 footer .other a {
+  display: inline-block;
   color: var(--white-opacity70);
   text-align: center;
   font-family: "Nunito Sans";
   font-size: .75rem;
   font-weight: 400;
+  pointer-events: none;
+  transition: color .2s, transform .3s;
 }
 
 footer .copy-rights {
