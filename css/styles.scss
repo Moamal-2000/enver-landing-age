@@ -1,6 +1,7 @@
 @import "../sass/mixins";
 @import "../sass/variables";
 @import "../css/fonts.css";
+@import "../sass/color";
 
 * {
   margin: 0;
@@ -18,21 +19,6 @@ body {
   font-size: 1rem;
   font-family: 'Nunito Sans', sans-serif;
   overflow-x: hidden;
-}
-
-:root {
-  --white: #fff;
-  --very-light-gray: #E7E7E7;
-  --white-opacity70: rgba(255, 255, 255, .7);
-  --black: #000;
-  --very-black-blue: #1E1E20;
-  --very-black-blue2: #121213;
-  --very-black: #19191B;
-  --very-black-opacity50: rgba(30, 30, 32, .5);
-  --black-cyan: #292D32;
-  --light-purple: #5454D4;
-  --light-red: #F04037;
-  --very-light-yellow: #FEDC5A;
 }
 
 .container {
