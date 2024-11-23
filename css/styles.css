@@ -187,7 +187,7 @@ header nav ul li a.active, header nav ul li a:hover {
 
 .contact-button {
   font-family: "Nunito Sans";
-  font-size: 0.6637rem;
+  font-size: 0.66rem;
   font-weight: 400;
   color: var(--white);
   background-color: transparent;
@@ -257,7 +257,7 @@ header nav ul li a.active, header nav ul li a:hover {
   width: 310px;
   height: 1150px;
   background-image: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.11) 100%);
-  transform: rotate(-54deg);
+  rotate: -54deg;
   border-radius: 155px;
   filter: blur(99.5px);
   z-index: -1;
@@ -270,7 +270,7 @@ header nav ul li a.active, header nav ul li a:hover {
   width: 310px;
   height: 1150px;
   background-image: linear-gradient(180deg, rgba(251, 168, 28, 0.11) 0%, rgba(224, 86, 136, 0.06) 100%);
-  transform: rotate(65.5deg);
+  rotate: 65.5deg;
   border-radius: 155px;
   filter: blur(99.5px);
   z-index: -1;
@@ -279,7 +279,7 @@ header nav ul li a.active, header nav ul li a:hover {
 .introduction-container h1 {
   color: var(--white);
   font-family: "Graphik Trial";
-  font-size: 3.32rem;
+  font-size: 3.3rem;
   font-weight: 700;
   line-height: 55px;
   width: 386px;
@@ -287,14 +287,14 @@ header nav ul li a.active, header nav ul li a:hover {
 
 @media (max-width: 768px) {
   .introduction-container h1 {
-    font-size: 2.625rem;
+    font-size: 2.6rem;
     width: 333px;
   }
 }
 .introduction-container p {
   color: var(--white-opacity70);
   font-family: "Nunito Sans";
-  font-size: 0.875rem;
+  font-size: 0.87rem;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.45px;
@@ -407,7 +407,7 @@ header nav ul li a.active, header nav ul li a:hover {
   height: 250px;
   border-radius: 15px;
   border: solid 2px var(--white);
-  transform: rotate(23.5deg);
+  rotate: 23.5deg;
   margin-top: 100px;
   top: 24px;
   left: 52px;
@@ -416,20 +416,20 @@ header nav ul li a.active, header nav ul li a:hover {
 .guy-image-container::before {
   content: "";
   position: absolute;
-  transform: rotate(23.5deg);
+  rotate: 23.5deg;
   width: 245px;
   height: 245.5px;
   border-radius: 15px;
   border: solid 3px transparent;
   border-color: transparent var(--white) var(--white) transparent;
   margin-top: 100px;
-  top: 63.3px;
+  top: 63px;
   left: 69px;
   z-index: 1;
 }
 
 .invisible-holder {
-  transform: rotate(23.5deg);
+  rotate: 23.5deg;
   overflow: hidden;
   width: 350px;
   height: 397px;
@@ -448,7 +448,7 @@ header nav ul li a.active, header nav ul li a:hover {
 }
 
 .invisible-holder .square-frame img {
-  transform: rotate(-23.5deg);
+  rotate: -23.5deg;
   width: 350px;
   height: 433px;
   -o-object-fit: contain;
@@ -501,14 +501,14 @@ header nav ul li a.active, header nav ul li a:hover {
 @media (max-width: 810px) {
   .why-us-section .content h2 {
     width: 327px;
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     line-height: 150%;
   }
 }
 .why-us-section .content p {
   color: var(--white-opacity70);
   font-family: "Nunito Sans";
-  font-size: 0.875rem;
+  font-size: 0.87rem;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.5px;
@@ -562,7 +562,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
   width: 74px;
   cursor: pointer;
 }
@@ -589,7 +589,7 @@ header nav ul li a.active, header nav ul li a:hover {
   filter: blur(99.5px);
   width: 310px;
   height: 338px;
-  transform: rotate(-54.374deg);
+  rotate: -54deg;
   z-index: -1;
 }
 
@@ -607,7 +607,7 @@ header nav ul li a.active, header nav ul li a:hover {
   filter: blur(99.5px);
   width: 570px;
   height: 1710px;
-  transform: rotate(65.7deg);
+  rotate: 65deg;
   z-index: -1;
 }
 
@@ -628,7 +628,7 @@ header nav ul li a.active, header nav ul li a:hover {
 
 @media (max-width: 768px) {
   .services-section .title h2 {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     line-height: 150%;
     width: 327px;
   }
@@ -663,7 +663,7 @@ header nav ul li a.active, header nav ul li a:hover {
   height: 28px;
   right: 0;
   bottom: 0;
-  transform: rotate(-31deg);
+  rotate: -31deg;
 }
 
 @media (max-width: 768px) {
@@ -721,7 +721,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .services-section .services .service:nth-child(2) .img-holder .background-color {
@@ -732,7 +732,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .services-section .services .service:nth-child(3) .img-holder .background-color {
@@ -743,7 +743,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .services-section .services .service:nth-child(4) .img-holder .background-color {
@@ -754,7 +754,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .services-section .services .service:nth-child(5) .img-holder .background-color {
@@ -765,7 +765,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .services-section .services .service:nth-child(6) .img-holder .background-color {
@@ -776,7 +776,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .services-section .services .service h3 {
@@ -809,7 +809,7 @@ header nav ul li a.active, header nav ul li a:hover {
 .templates-section .heading p {
   color: var(--white);
   font-family: "Nunito Sans";
-  font-size: 2.4059rem;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -819,7 +819,7 @@ header nav ul li a.active, header nav ul li a:hover {
 @media (max-width: 768px) {
   .templates-section .heading p {
     width: 327px;
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 150%;
   }
@@ -830,12 +830,11 @@ header nav ul li a.active, header nav ul li a:hover {
 }
 
 .templates-section .slider {
-  overflow: auto;
+  overflow-x: auto;
   width: 100%;
 }
 .templates-section .slider::-webkit-scrollbar {
   display: none;
-  scroll-behavior: smooth;
 }
 
 .templates-section .templates {
@@ -856,7 +855,7 @@ header nav ul li a.active, header nav ul li a:hover {
 }
 .templates-section .templates img {
   width: 223px;
-  border-radius: 7.964px;
+  border-radius: 8px;
 }
 .templates-section .templates img:nth-child(2) {
   margin-top: 40px;
@@ -878,7 +877,7 @@ header nav ul li a.active, header nav ul li a:hover {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 50%);
+  translate: -50% 50%;
   width: 15px;
   height: 5px;
   background-color: var(--light-purple);
@@ -894,7 +893,7 @@ header nav ul li a.active, header nav ul li a:hover {
   display: none;
   position: absolute;
   bottom: 0;
-  transform: translate(-50%, 50%);
+  translate: -50% 50%;
   left: 50%;
   width: 70px;
   height: 30px;
@@ -995,7 +994,7 @@ header nav ul li a.active, header nav ul li a:hover {
 @media (max-width: 768px) {
   .contact-section .text p {
     width: 327px;
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 150%;
     margin-bottom: 50px;
@@ -1007,7 +1006,7 @@ header nav ul li a.active, header nav ul li a:hover {
   color: var(--white);
   text-align: center;
   font-family: "Nunito Sans";
-  font-size: 0.875rem;
+  font-size: 0.87rem;
   text-transform: capitalize;
   font-weight: 700;
   background-color: var(--light-purple);
@@ -1064,7 +1063,7 @@ footer .other a {
 footer .copy-rights {
   color: var(--white-opacity70);
   font-family: "Nunito Sans";
-  font-size: 0.6875rem;
+  font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: -0.33px;
   display: flex;
