@@ -10,6 +10,7 @@ const cursorEffectEle = document.querySelector(".cursor-effect")
 const footerLiElements = document.querySelectorAll("footer nav li")
 const allAnchorTags = document.querySelectorAll("a")
 const allButtons = document.querySelectorAll("button")
+const allClickableElements = document.querySelectorAll(":where(a, button, li)")
 
 
 
@@ -19,9 +20,6 @@ const allButtons = document.querySelectorAll("button")
 // Variables
 let isHeaderActive = false
 let lastScrollYValue = 0
-let isMouseEnterNavLinks = true
-const allClickableElements = [...footerLiElements, ...allAnchorTags, ...allButtons, ...slideButtons]
-
 
 
 
@@ -61,23 +59,9 @@ function handleSlidesButtons(btn) {
 function handleCursorMoveEffect(event) {
   const positionX = event.clientX;
   const positionY = event.clientY;
-  const halfWidthCursor = cursorEffectEle.offsetWidth / 2;
-  const halfHeightCursor = cursorEffectEle.offsetHeight / 2;
 
   cursorEffectEle.style.cssText = `
-  transform: translate(${positionX - halfWidthCursor}px, ${positionY - halfHeightCursor}px)
-  `
-}
-
-
-function handleCursorActive(event, ele) {
-  const positionX = event.offsetX;
-  const positionY = event.offsetY;
-  const halfWidthLiEle = event.currentTarget.offsetWidth / 2;
-  const halfHeightLiEle = event.currentTarget.offsetHeight / 2;
-
-  ele.style.cssText = `
-  transform: translate(${positionX - halfWidthLiEle}px, ${positionY - halfHeightLiEle}px);
+  transform: translate(${positionX}px, ${positionY}px)
   `
 }
 
@@ -98,15 +82,5 @@ allClickableElements.forEach(element => {
 
   element.addEventListener("mouseout", () => {
     cursorEffectEle.classList.remove("active")
-  })
-})
-
-liElements.forEach(li => {
-  const anchorTag = li.querySelector("a")
-
-  li.addEventListener("mousemove", (event) => handleCursorActive(event, anchorTag))
-
-  li.addEventListener("mouseout", () => {
-    anchorTag.style.cssText = ""
   })
 })
