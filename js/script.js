@@ -4,7 +4,7 @@
 const header = document.querySelector('header')
 const slider = document.querySelector(".slider")
 const templatesHolder = document.querySelector(".templates")
-const slideButtons = document.querySelectorAll(".switchers > i")
+const slideButtons = document.querySelectorAll(".switchers > button > i")
 const liElements = document.querySelectorAll("footer nav ul li")
 const cursorEffectEle = document.querySelector(".cursor-effect")
 const footerLiElements = document.querySelectorAll("footer nav li")
